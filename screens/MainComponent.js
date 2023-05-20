@@ -148,13 +148,15 @@ const LoginNavigator = () => {
             <Stack.Screen
                 name='Login'
                 component={LoginScreen}
-                options={({ navigation, route }) => ({ 
+                options={({ navigation, route }) => ({
                     headerTitle: getFocusedRouteNameFromRoute(route),
                     headerLeft: () => (
                         <Icon
                             name={
                                 getFocusedRouteNameFromRoute(route) ===
-                                'Register' ? 'user-plus' : 'sign-in'
+                                'Register'
+                                    ? 'user-plus'
+                                    : 'sign-in'
                             }
                             type='font-awesome'
                             iconStyle={styles.stackIcon}
@@ -164,7 +166,7 @@ const LoginNavigator = () => {
                 })}
             />
         </Stack.Navigator>
-    )
+    );
 };
 
 const DirectoryNavigator = () => {
